@@ -15,6 +15,7 @@ public class Scr_enemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Tiempo para que vuelva a cargar el enemigo
         if (Timer <= 0)
         {
             Instantiate(Enemigo, new Vector3(0,0,0),Quaternion.Euler(0,0,0));

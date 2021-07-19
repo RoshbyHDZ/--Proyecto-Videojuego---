@@ -11,7 +11,7 @@ public class Scr_enemigo : MonoBehaviour
     public int Vida;
     public int RandomScale;
 
-    // Start is called before the first frame update
+    //Da la posicion se mueve el enemigo
     void Start()
     {
         if(Random.Range(0,2) == 0)
@@ -27,12 +27,13 @@ public class Scr_enemigo : MonoBehaviour
         transform.localScale = new Vector3(RandomScale, 1, 1);
     }
 
-    // Update is called once per frame
+    // Le da la velocidad para que el enemigo rote de izquierda a derecha o viceversa
     void Update()
     {
         Enemigo.transform.Rotate(0, 0, VelocidadRotacion * Time.deltaTime);
         transform.position += new Vector3(0, VelocidadBajada * Time.deltaTime, 0);
 
+        //si se destruye un enemigo se gana 1 punto
         if (Vida <= 0)
         {
             GameObject.Find("Jugador1").GetComponent<PlayerControl>().Puntos += 1; 

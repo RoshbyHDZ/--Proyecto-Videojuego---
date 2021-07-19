@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scr_planetas : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Scr_planetas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Codigo para que se muevan los planetas 
        
         if (transform.position.y <= -11)
         {
@@ -29,4 +31,5 @@ public class Scr_planetas : MonoBehaviour
       
         
     }
+    
 }

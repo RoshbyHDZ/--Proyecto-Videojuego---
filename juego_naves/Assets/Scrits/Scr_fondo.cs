@@ -8,7 +8,7 @@ public class Scr_fondo : MonoBehaviour
     public float paralax = 2f;
     Vector2 offset;
 
-    // Start is called before the first frame update
+    //Toma el objeto con el que se creo el fondo que es un material
     void Start()
     {
         SpriteRenderer sp = GetComponent<SpriteRenderer>();
@@ -18,7 +18,7 @@ public class Scr_fondo : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    //Y aca le agrega el efecto parallax, este se aplica mientras va pasando el tiempo
     void Update()
     {
 
